@@ -1,0 +1,172 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Crimson Text', serif;
+	letter-spacing: 2px;
+	background-color: #b8e3a1;
+}
+
+.navbar {
+	color: white;
+	background-color: black;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+.navbar::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+.lm h1 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.rm {
+	text-align: center;
+}
+
+.rm::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+.rm div {
+	text-transform: uppercase;
+	padding: 10px 20px;
+}
+
+.rm div a {
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	transition-duration: 0.5s;
+}
+
+.rm div a:hover {
+	color: grey;
+}
+
+.product {
+	width: 320px;
+	margin: 280px auto;
+}
+
+.product:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.product div {
+	text-align: center;
+	float: left;
+	padding: 10px;
+	width: 320px;
+	border: 1px solid lightgrey;
+	margin: 10px 0;
+	background-color: white;
+	transition: 0.3s;
+}
+
+.product div:hover {	
+	box-shadow: 0 0 10px black;
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+.rm div {
+ 	border-bottom: 1px solid white;
+}
+
+.product div img {
+	width: 100%;
+	height: 280px;
+}
+
+.product div h2 {
+	margin-top: 10px;
+}
+
+.product div h3 {
+	margin: 10px 0;
+	margin-top: 20px;
+	background-color: black;
+	border-radius: 10px;
+	color: white;
+}
+
+@media (min-width: 576px) {
+	.product {
+		width: 560px;
+	}
+	.product > div {
+		width: 260px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.product > div img {
+		height: 230px;
+	}
+	.rm div a {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar {
+		padding: 20px 60px;
+	}
+	.product {
+		width: 740px;
+		margin: 120px auto;
+	}
+	.product > div {
+		width: 226px;
+	}
+	.product > div img {
+		height: 200px;
+	}
+	.lm {
+		float: left;
+	}
+	.rm {
+		float: right;
+	}
+	/*.rm div a {
+		font-size: 16px;
+	}*/
+	.rm div {
+		float: left;
+		border: none;
+	}
+	.rm div+div {
+		border-left: 1px solid white;
+	}
+}	
+
+@media (min-width: 992px) { 
+	.product {
+		width: 970px;
+	}
+	.product > div {
+		width: 222.5px;
+	}
+	.product > div img {
+		height: 100%;
+	}
+	.rm div a {
+		font-size: 20px;
+	}
+}
